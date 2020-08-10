@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+}
+
+.cont {
+    overflow: hidden;
+}
+
+.cont img {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cap {
+    overflow: hidden;
+    visibility: hidden;
+    display: table;
+    text-align: center;
+    opacity: 0.75;
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    background-color: black;
+    height: 50%;
+    width: 25%;
+    animation: dropanid 0.75s 1;
+    -webkit-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+}
+
+.cont:hover .cap {
+    visibility: visible;
+    animation: dropanic 0.5s 1;
+}
+
+.pert {
+    top: 0;
+}
+
+.perb {
+    bottom: 0;
+}
+
+.el {
+    left: 0;
+}
+
+.ml {
+    left: 25%;
+}
+
+.mr {
+    right: 25%;
+}
+
+.er {
+    right: 0;
+}
+
+.cap div {
+    display: table-cell;
+
+    vertical-align: middle;
+    height: 100%;
+    opacity: 1;
+}
+
+.perlog {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 5%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes dropanic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.75;
+    }
+}
+
+@keyframes dropanid {
+    0% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#home img {
+    height: 20px;
+}
+
+#home {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 32px;
+    background-color: rgb(104, 141, 110);
+    margin: 0;
+}
+.navbar {
+    animation: dropani 0.2s 1;
+    /*Appearance of navbar*/
+    position: sticky;
+    top: 0;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(104, 141, 110);
+    opacity: 0.95;
+    /*Resizing and positioning*/
+    width: 100%;
+    /*Smooth transition*/
+    transition: top 0.2s ease-in-out;
+}
+.nav-up {
+    /*Appearance of navbar*/
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(104, 141, 110);
+    opacity: 0.95;
+    /*Resizing and positioning*/
+    position: sticky;
+    top: -85px;
+    width: 100%;
+    /*Smooth transition*/
+    transition: top 0.2s ease-in-out;
+}
+@keyframes dropani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.95;
+    }
+}
+
+@keyframes dropanib {
+    0% {
+        opacity: 0.95;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.dropdown {
+    float: right;
+}
+
+/*Button to activate drop down menu*/
+
+.dropdown .dropbtn {
+    /*Appearance*/
+    background-color: rgb(77, 105, 82);
+    border: none;
+    outline: none;
+    opacity: 0.95;
+    /*Positioning*/
+    padding: 25px 50px;
+    /*Behaviour*/
+    cursor: pointer;
+}
+
+/*Dropdown image rotation*/
+
+.dropdown .dropbtn img {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.dropdown:hover .dropbtn img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/*Dropdown Block*/
+
+.dropdown-content {
+    /*Appearance*/
+    opacity: 0.95;
+    background-color: rgb(104, 141, 110);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*Resizing and Positioning*/
+    right: 0;
+    display: block;
+    position: absolute;
+    min-width: 160px;
+    /*Behaviour*/
+    visibility: collapse;
+    z-index: 1;
+    /*Transition*/
+    animation: dropanib 1s 1;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+/*Appearing of dropdown menu*/
+
+.dropdown:hover .dropdown-content {
+    animation: dropani 1s 1;
+    visibility: visible;
+}
+
+/*Links on dropdown Menu*/
+
+.dropdown-content a {
+    /*Appearance*/
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 12px 16px;
+    text-align: center;
+    display: block;
+}
+
+/*Behaviour on hovering over dropdown contents*/
+
+.dropdown-content a:hover {
+    background-color: rgb(85, 165, 98);
+}
+.test {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+body {
+    background: url("./Pictures/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
